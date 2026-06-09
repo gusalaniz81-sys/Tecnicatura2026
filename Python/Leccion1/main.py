@@ -114,7 +114,8 @@ print(f"El resultado de la division (int) es: {division}")
 exponente = operandoA ** operandoB
 print(f"resultado de la exponente: {exponente}")    
 '''
-'''
+
+''' EJERCICIO RECTANGULO:
 alto = int(input('Proporciona el alto del rectangulo: '))
 ancho = int(input('Proporciona el ancho del rectangulo: '))
 area = alto * ancho
@@ -123,12 +124,57 @@ print('Perímetro: ',perimetro)
 print('Area: ',area)
 '''
 """
+miVariable3 = 10
+print(miVariable3)
+
+#Operadores de reasignación
+miVariable3 = miVariable3 + 1
+print(miVariable3)
+
+miVariable3 +=1
+print(miVariable3)
+
+# miVariable3 = miVariable -2
+miVariable3 -=2
+print(miVariable3)
+
+# miVariable3 = miVariable *3
+miVariable3 *=3
+print(miVariable3)
+
+# miVariable3 = miVariable /2
+miVariable3 /= 2
+print(miVariable3)
+"""
+d = 4
+b = 2
+resultado = d == b #Comprobamos si son iguales
+print(resultado)
+
+# Operador diferente
+resultado = d != b
+print(resultado)
+
+#Operador mayor que
+resultado = d > b
+print(resultado)
+
+# Operador Menor que
+resultado = d < b
+print(resultado)
+
+# Operador mayor o igual que
+resultado = d >= b
+print(resultado)
+
+"""
 a = int(input('Introduce un numero: '))
 print(f"El residuo de la  división es: {a%2}")
 if a % 2 == 0:
     print("El valor de a es: {a} es un numero PAR")
 else:
     print("El valor de a es: {a} es un numero impar")
+"""
 """
 edadAdulto = 18
 edadPersona = int(input('Ingrese su edad: '))
@@ -154,3 +200,4 @@ miVariable3 =12
 miVariable3 = miVariable3 / 2
 #miVariable3 /= 2
 print(miVariable3)
+"""
