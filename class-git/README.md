@@ -137,6 +137,7 @@ Revisar y ejecutar cada comando, hacerlo como practica<br>
 
 Profesor Ariel Betancud<br>
 
+
 # Clase 4 Git Bash
 Analizar cambios en los archivos de tu proyecto Git parte 4
 <br>
@@ -147,16 +148,16 @@ Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hace
 >TAREA -> AGREGAR LOS COMENTARIOS EN LOS COMANDOS, PARA SABER QUE PASA CON CADA UNO.
 
 ```sh
-cd tecnicatura
-cd class-git
-ls
-touch historia.txt
-code .
-#Modificamos el archivo historia.txt colocando lo siguiente: Bienvenido     mi nombre es Ariel (coloca tu nombre)
-ctrl + s
-git status
-git add .
-git status
+cd tecnicatura #Ingresamos a la carpta tecnicatura
+cd class-git #Ingresamos a la carpta del proyecto "class-git"
+ls #Muetra una lista de archivos y carpetasdel direcotio actual
+touch historia.txt #Creamos un archivo vacío llamado historia.txt
+code . #Abrimo la carpeta actual en Visual Studio Code.
+#Modificamos el archivo historia.txt colocando lo siguiente: Bienvenido     mi nombre es Gustavo (coloca tu nombre)
+ctrl + s #Guardamos los cambios realizados en el archivo
+git status #Mostramos el estado del repositorio y los archivos modificados
+git add . #Agregamos todos los archivos modificados al área de preparación 
+git status #Verificamos nuevamente qué archivos están listos para commit
 git commit #Sin agregar -m veremos que pasa, se abre el editor de texto vim
 #Agregar mensaje y salir con
 Esc #Presionamos Escape 
@@ -164,9 +165,9 @@ Esc #Presionamos Escape
 Esc + shift + z + z #Salimos del mensaje para el commit, en linux, esto anda en algunas terminales
 
 #Agregamos otra línea de mensaje en historia.txt desde VSC: estoy estudiando programación
-ctrl + s
-git add .
-git commit
+ctrl + s # Guardamos los cambios
+git add .  # Agregamos nuevamente los cambios al área de preparación
+git commit  # Se abre otra vez Vim para escribir el mensaje del commit
 #Se abre un editor de código basado en línea de comandos, editor de texto como VSC llamado vim
 Esc + i #Para comenzar a escribir mensaje del commit, no suele ser necesario
 ctrl + x #Para salir en linux
