@@ -1,2 +1,4 @@
 # Bienvenido!! 
 ## Mi nombre es Gustavo
+
+Estoy estudiando programación
