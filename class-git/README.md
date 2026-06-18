@@ -677,3 +677,114 @@ git merge master #Ahora pasamos los cambios a la rama second.
 La tarea de hoy, agregar esta clase al README.md con el lenguaje de markdown, como lo hicimos en la clase pasada, luego deben hacer el commit correspondiente al cambio agregado.<br>
 
 Profesor Ariel Betancud<br>
+
+
+
+# Clase 10-A Git Bash
+
+## Cómo funcionan las llaves públicas y privadas
+
+>Sección lectura
+
+Las llaves públicas y privadas, conocidas también como cifrado asimétrico de un solo camino, sirven para mandar mensajes privados entre varios nodos con la lógica de que firmas tu mensaje con una llave pública vinculada con una llave privada que puede leer el mensaje.<br>
+
+Las llaves públicas y privadas nos ayudan a cifrar y descifrar nuestros archivos de forma que los podamos compartir sin correr el riesgo de que sean interceptados por personas con malas intenciones.<br>
+
+Cómo funciona un mensaje cifrado con llaves públicas y privadas Ambas personas deben crear su llave pública y privada.<br>
+
+Ambas personas pueden compartir su llave pública a las otras partes (recuerda que esta llave es pública, no hay problema si la “interceptan”).<br>
+
+La persona que quiere compartir un mensaje puede usar la llave pública de la otra persona para cifrar los archivos y asegurarse que solo puedan ser descifrados con la llave privada de la persona con la que queremos compartir el mensaje.<br>
+
+El mensaje está cifrado y puede ser enviado a la otra persona sin problemas en caso de que los archivos sean interceptados.<br>
+
+La persona a la que enviamos el mensaje cifrado puede emplear su llave privada para descifrar el mensaje y ver los archivos.<br>
+
+Nota: puedes compartir tu llave pública, pero nunca tu llave privada.<br>
+
+
+La tarea de hoy, agregar esta clase al README.md con el lenguaje de markdown, como lo hicimos en la clase pasada, luego deben hacer el commit correspondiente al cambio agregado.<br>
+
+Revisar y ejecutar cada comando, hacerlo como practica.<br>
+
+Profesor Ariel Betancud<br>
+
+
+# Clase 10-B Git Bash
+## Configura tus llaves SSH en local
+
+Si usamos GitHub solo con usuario y contraseña, si un día perdemos nuestra PC, perdemos todo, nuestras contraseñas y los proyectos de nuestros clientes están todos en riesgo. Esta es la forma en que muchos sitios web son jackeados, para evitar esto tenemos que agregar una capa de seguridad mucho más fuerte. Es aquí donde podemos comenzar a crear el entorno con llaves publicas y privadas. Esto tiene una ventaja, no solo es que nuestra seguridad será más fuerte, si no que ya no tendrás que poner nunca más tu usuario y contraseña.<br>
+
+
+En nuestra maquina, debemos crear una llave privada y otra pública, una vez creada la llave pública se la enviamos a GitHub en nuestro repositorio, y le decimos: para este repositorio quiero que uses esta llave pública, de mi llave privada en mi PC, todo esto lo conectamos por un protocolo nuevo, en vez de conectarnos al repositorio por HTTPS, vamos a conectarnos por un protocolo que se llama SSH.<br>
+
+
+En la primera conección GitHub se va a dar cuenta que le mandaste una llave publica que esta relacionada con tu llave privada y nos va a enviar cifrada con nuestra llave pública su propia llave pública de GitHub, porque GitHub también tiene una llave privada, todo esto sucederá automaticamente, a la llave privada que nosotros tenemos, se le puede hacer una contraseña encima, para añadir más seguridad para hacerla mas fuerte y más poderosa.<br>
+
+
+Las llaves SSH no son por repositorio o por proyecto, si no que es por persona, también es por máquina u ordenador a través del cual quieras acceder.<br>
+
+Ahora vamos a crear unas llaves exclusivamente para nosotros.<br>
+
+En este ejemplo, aprenderemos cómo configurar nuestras llaves SSH en local.<br>
+
+## Comandos:
+```sh
+abrir git bash #Esto en window como administrador para tener todos los permisos necesarios
+abrir terminal #En ubuntu, y nos quedamos sin entrar a ningun proyecto o carpeta.
+git config -l #Recordamos nuestra configuración en Git, podemos hacer esto estando en la ruta de cualquier sitio en nuestro PC
+git config --global user.email "alumnos@mail.com" #Actualizamos el correo que usamos en GitHub.
+ssh-keygen -t rsa -b 4096 -C "alumnos@mail.com" #Dira que esta generando la llave pública y privada, también nos pregunta donde vamos a guardar la llave, presionamos enter, nos va a pedir otra contraseña, esta es una que podemos crear en el momento para mayor seguridad, IMPORTANTE: debes recordarla porque te la pedirá cada vez que quieras acceder a la clave ssh
+eval $(ssh-agent -s) #Encendemos el servidor de llaves SSH, ya esta corriendo
+```
+~ #Se utiliza virgulilla para poner la ruta, es una variable que tiene el nombre de nuestra carpeta home, esto para el siguiente comando, donde verás la virgulilla dentro del comando
+```sh
+ssh-add ~/.ssh/id_gd456123 #Añadimos la ruta, no la .pub que es la publica, ponemos la ruta con el nombre del archivo privado, recordar que es una ruta, se debe poner el nombre de la carpeta que contiene la clave privada.
+Para los que les cuesta, ¿Qué es una ruta? respondamos entre todos... pasar prompt a la IA
+Pasamos a ver -> Cómo generar tus llaves SSH:
+a. Generar tus llaves SSH**
+Recuerda que es muy buena idea proteger tu llave privada con una contraseña, lo hacemos de nuevo para repasar como se hace, esto es para que controles que has hecho todo bien:
+ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+b. Terminar de configurar nuestro sistema.
+```
+>En Windows y Linux:
+
+Encender el “servidor” de llaves SSH de tu computadora:
+eval $(ssh-agent -s)
+Añadir tu llave SSH a este “servidor”:
+ssh-add ruta-donde-guardaste-tu-llave-privada
+
+>En Mac:
+Encender el “servidor” de llaves SSH de tu computadora:
+eval "$(ssh-agent -s)"
+Si usas una versión de OSX superior a Mac Sierra (v10.12), debes crear o modificar un archivo “config” en la carpeta de tu usuario con el siguiente contenido (ten cuidado con las mayúsculas): vim config
+Host *
+AddKeysToAgent yes
+UseKeychain yes
+IdentityFile ruta-donde-guardaste-tu-llave-privada
+Añadir tu llave SSH al “servidor” de llaves SSH de tu computadora (en caso de error puedes ejecutar este mismo comando pero sin el argumento -K):
+ssh-add -K ruta-donde-guardaste-tu-llave-privada
+
+
+Por último les quiero hablar del 2FA: Segundo Factor de Autenticación. Este se puede hacer con varios dispositivos, y deberías hacerlo, ante el robo o perdida de un celular o ordenador, deberías tener un respaldo ante esto, este 2FA se puede hacer con diferentes generadores de códigos  de seguridad.<br>
+
+>Para añadir un 2FA:
+```sh
+1. Clic en nuestro perfil, arriba y a la derecha, seleccionamos...
+2. Settings
+3. Password and Authentication
+4. GitHub Mobile: GitHub Mobile can be used for two-factor authentication by installing the GitHub Mobile app and signing in to your account. -> GitHub Mobile se puede utilizar para la autenticación de 2FA instalando la aplicación GitHub Mobile e iniciando sesión en su cuenta.
+```
+Esto quiere decir que también se utiliza la app de GitHub donde al iniciar sesión desde cualquier dispositivo nos muestra un número que debemos ingresar en la app de nuestro dispositivo celular.
+```sh
+5. Authenticator app: Edit
+```
+Esto para agregar a través de un QR una app que genere cada 1 segundo nuevos códigos numéricos para la autenticación, yo recomiendo la aplicación: Twilio Authy Authenticator
+Es recomendable iniciar sesión, osea registrarnos y guardar estos datos para que al cambiar un dispositivo sigamos teniendo acceso.
+
+
+La tarea de hoy, agregar esta clase al README.md con el lenguaje de markdown, como lo hicimos en la clase pasada, luego deben hacer el commit correspondiente al cambio agregado, esto dentro de la carpeta git o class-git, segun el nombre que hayas elegido, ahí debe estar el README.md con todos los comandos, con todas las clases que hemos hecho.
+
+Revisar y ejecutar cada comando, hacerlo como practica.
+
+Profesor Ariel Betancud
