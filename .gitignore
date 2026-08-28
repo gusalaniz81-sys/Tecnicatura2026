@@ -5,3 +5,7 @@
 /Java/Segundo Cuatrimestre/Clase2_Ciclos/build/
 /Java/Segundo Cuatrimestre/Clase3/nbproject/private/
 /Java/Segundo Cuatrimestre/Clase3/build/
+**/build/
+**/nbproject/private/
+**/.idea/
+/Syntax-Error-S2/
