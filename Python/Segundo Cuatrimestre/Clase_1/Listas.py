@@ -5,7 +5,7 @@ print(nombres[0])
 print(nombres[1])
 print(nombres[-1])
 print(nombres[0:2]) # Solo muestra el índice 0, 1 pero no el indice 2
-print(nombres[:3]) # Indicews a mostrar 0, 1, 2
+print(nombres[:3]) # Indices a mostrar 0, 1, 2
 #Desde el índice indicado hasta el final
 print(nombres[1: ])
 # Modificamos un valor
