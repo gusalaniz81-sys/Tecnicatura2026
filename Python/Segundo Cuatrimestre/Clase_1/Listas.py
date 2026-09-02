@@ -1,4 +1,8 @@
 # Listas = Gustavo, Lisandro, Yamila, Bastian
+# Colecciones en Python
+
+#Las listas es lo que se conoce en otros Lenguajes como Arreglos o Vectores
+
 nombres = ['Lisandro', 'Yamila', 'Bastian', 'Nicolás']
 print(nombres)
 print(nombres[0])
@@ -22,6 +26,11 @@ print(len(nombres)) # Le psamos como parámetro la lista
 
 # Agregar un elemento
 nombres.append('Nicolas')
+nombres.append([1, 2, 3])
+nombres.append(True)
+nombres.append(10.45)
+nombres.append([4, 5])
+nombres.append(7)
 print(nombres)
 
 # Insertar un elementos en un indice específico
@@ -47,5 +56,35 @@ nombres.clear()
 print(nombres)
 
 # Eliminar la lista
-del nombres
+#del nombres
 print(nombres)
+
+# Concatenar listas
+lista1 = [1, 2, 3, 1]
+lista2 = [4, 5, 6, 1]
+lista3 = lista1 + lista2 #Concatenamos
+print(lista3)
+
+lista3.extend([7, 8, 9, 1]) #Función para agregar varios elementos a una lista
+print(lista3)
+
+print(lista3.index(5)) #Función para ubicar en que índice está el valor ingresado
+# print(lista3.index(0)) esto daría un error por no ser el elementos parte de la lista
+
+#Como sabemos cuantos valores están repetidos en una lista
+print(lista3.count(1)) #Cuenta cuantos valores iguales hay dentro de la lista
+
+#Para poner al revez la lista
+lista3.reverse()
+print(lista3)
+
+#Para que una lista se multiplique repitiendo sus elementos
+lista3 =lista3 * 2
+print(lista3)
+
+#Métodos de ordenamiento
+lista3.sort() # ordena los elementos ascendentemente
+print(lista3)
+lista3.sort(reverse=True) #Ordena descendentemente
+print(lista3)
+
