@@ -22,3 +22,15 @@
 /Java/Clase8/Clase8/nbproject/private/
 /Java/Clase9/Clase9/nbproject/private/
 /Java/Clase10/Clase10/build/
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# PyCharm / IntelliJ
+.idea/
+
+# Java / NetBeans
+build/
+*.class
+nbproject/private/
