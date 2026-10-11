@@ -68,3 +68,22 @@ def listarTerminos(**terminos): #Lo más utilizados **kwargs para recibir los ar
 listarTerminos() # NO recibe nada, nada se va a mostrar
 listarTerminos(IDE='Integrad Develoment Enviroment', PK='Primary Key' )
 listarTerminos(Nombre= 'Leonel Messi')
+
+def desplegarNombres(nombres):
+    for nombre in nombres:
+        print(nombre)
+nombres2 = ['Lichi', 'Basti', 'Nico']
+desplegarNombres(nombres2)
+desplegarNombres('Lucila')
+#desplegarNombres(10) No es un objeto iterable
+desplegarNombres((10, 11)) #Lo convertimos en una tupla,  en un solo elemento no olvidar la coma
+desplegarNombres([22, 55]) #La convertimos en una lista
+
+### Funciones Recursivas
+def factorial(numero):
+    if numero == 1: #Caso Base
+        return 1
+    else:
+        return numero * factorial(numero - 1)
+resultado = factorial(5) #Lo hacemos en código duro
+print(f'El factorial del número 5 es: {resultado}')
