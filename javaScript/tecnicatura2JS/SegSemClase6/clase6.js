@@ -57,3 +57,5 @@ let Empleado1 = new Empleado('Mia', 'Bertoa', 'Idioma');
 console.log(Empleado1);
 console.log(Empleado1.nombre);
 console.log(Empleado1.nombreCompleto());
+
+//Object.prototype.toString Esta esla manera de acceder a atributos de manera dinámica
