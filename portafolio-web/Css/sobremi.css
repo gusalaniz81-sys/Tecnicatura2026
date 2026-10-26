@@ -1,0 +1,31 @@
+.sobremi {
+    width: 100%;
+}
+
+.container-sobremi {
+    display: flex;
+    width: 80%;
+    max-width: 1100px;
+    padding: 2rem;
+    margin: 3rem auto;
+    gap: 3rem;
+    align-items: center;
+    background: var(--card-bg-color);
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.img-perfil {
+    border-radius: 50%;
+}
+
+@media (max-widht: 767px) {
+    .container-sobremi {
+        width: 100%;
+        padding: 1;
+        margin-top: 1rem; /* Margen a lo alto*/
+        line-height: 2.5rem; /* Espacio entre los párrafos del texto*/
+        font-size: small; /*Tamaño de la fuente*/ 
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,66 @@
+.container-estudios {
+    width: 80%;
+    max-width: 1100px;
+    padding: 2rem;
+    margin: 3rem auto;
+    background: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Nombres de instituciones */
+.container-estudios h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Fechas de los estudios */
+.container-estudios h4 {
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Descripciones */
+.container-estudios p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Separación entre formación y conocimientos */
+.container-estudios h2:not(:first-child) {
+    margin-top: 3rem;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 767px) {
+    .container-estudios {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+}
+
+/* Contenedor de habilidades */
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Etiquetas de cada habilidad */
+.habilidades span {
+    background: #334155;
+    color: var(--text-color);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}

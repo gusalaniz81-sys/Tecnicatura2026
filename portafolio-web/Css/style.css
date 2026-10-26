@@ -1,34 +1,58 @@
-/*Definiendo variable de color css
-*/
+/* Variables de colores - Modo oscuro */
 :root {
-    --body-bg-color: rgb(255, 255, 255);
-    --text-color: rgb(1, 0, 3);
-    --colorh1-color: rgb(55, 1, 250);
+    --body-bg-color: #0F172A;
+    --text-color: #F1F5F9;
+    --colorh1-color: #38BDF8;
+    --card-bg-color: #1E293B;
+    --secondary-text-color: #94A3B8;
 }
 /*Aplicamos variable creada en el root al body de nuestra web*/
 /*Reemplaze el body con el uso de variable css*/
 body {
     background: var(--body-bg-color);
     color: var(--text-color);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
 }
+
 h1, h2 {
     color: var(--colorh1-color);
 }
 
-
-.navigator{
+/* Contenedor del menú */
+.navigator {
     display: flex;
-    gap: 3rem;
-    list-style: none;
     justify-content: flex-end;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
     margin: 0 3rem;
-    
+    flex-wrap: wrap;
 }
-a{
+
+/* Cada elemento del menú */
+.navigator li {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--card-bg-color);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--text-color);
 }
+
+.navigator li:hover {
+    background: var(--colorh1-color);
+}
+
+.navigator li:hover a {
+    color: var(--body-bg-color);
+}
+
 /* Celular (Pantalla pequeña, hasta 767px*/
 @media (max-widht: 767px) {
     .titulo{
@@ -39,29 +63,54 @@ a{
         gap: 1rem;
         align-items: center;
     }
-    .container-sobremi {
+    
+    .container-experiencia, .container-estudios{
         width: 100%;
-        padding: 1;
-        margin-top: 1rem; /* Margen a lo alto*/
-        line-height: 1.6rem; /* Espacio entre los párrafos del texto*/
-        font-size: small; /*Tamaño de la fuente*/ 
-        flex-direction: column;
+        margin: 0rem;
+    }
+    .experiencia, .estudios {
+    width: 100%;
+    padding: 0;
+    color: var(--text-color);
     }
 }
-.container-sobremi{
+.sobremi{
     display: flex;
-    width: 50%; /* Ancho */
-    padding: 2rem;
-    margin-top: 5rem; /* margen a lo alto*/
-    line-height: 1.6; /* Espaciado entre párrafos del texto*/
-    font-size: large; /*Tamaño de la fuente*/
-    color: rgb(90, 2, 2);
-    gap: 5rem;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-.img-perfil {
-    border-radius: 50%;
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .titulo {
+        justify-content: center;
+    }
+    .navigator {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .estudios, .experiencia{
+        width: 75%;
+    }
 }
+/* Escritorio: pantallas de 1024px o más */
+@media (min-width: 1024px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+
+    .navigator {
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 0 3rem;
+    }
+
+    .sobremi,
+    .experiencia,
+    .estudios {
+        width: 100%;
+    }
+}
+
 .descripcion {
     max-height: 700px;
     line-height: 1.6;

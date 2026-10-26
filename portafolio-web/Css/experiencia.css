@@ -1,0 +1,31 @@
+.container-experiencia {
+    width: 80%;
+    max-width: 1100px;
+    padding: 2rem;
+    margin: 3rem auto;
+    background: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+
+.container-experiencia a {
+    display: inline-block;
+    color: var(--colorh1-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.container-experiencia h4 {
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.container-experiencia h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}

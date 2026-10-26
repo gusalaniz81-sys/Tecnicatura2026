@@ -1,47 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <!--Especificamos el idioma del contenido del documento-->
-    <meta http-equiv="content-lenguage" content="es"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Agregamos dos etiquetas meta para el Seo de las clase anetrior mas otra etiqueta meta la del autor-->
-     <meta name="descripcion" content="Nombre del grupo o alumno, creado por nombre del grupo especializado en [Programación]">
-     <meta name="Keywords" content="portafolio, desarrollador web, [programador], proyectos, contactos">
-     <meta name="author" content="Tu nombre">
-    <title>Portafolio web</title>
+    <!-- Metadatos SEO -->
+    <meta name="description"
+          content="Portfolio de Gustavo Alaniz, estudiante de Programación en UTN. Proyectos en Python, Java, JavaScript y desarrollo web.">
+
+    <meta name="keywords"
+          content="Gustavo Alaniz, portfolio, programación, Python, Java, JavaScript, HTML, CSS, desarrollo web">
+
+    <meta name="author" content="Gustavo Alaniz">
+
+    <title>Gustavo Alaniz | Portfolio</title>
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Archivos CSS -->
     <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/sobremi.css">
+    <link rel="stylesheet" href="./Css/experiencia.css">
+    <link rel="stylesheet" href="./Css/estudios.css">
 </head>
+
 <body>
-     <header>
-        <h1>Gustavo Alaniz - Tecnico en programacion</h1>
-        <nav>
-            <!--Agregue nuevos enlaces para nuestro portafolio web-->
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Gustavo Alaniz</h1>
+        <p>Estudiante de Programación | Desarrollo de Software</p>
+
+        <!-- Menú de navegación -->
+        <nav aria-label="Navegación principal">
             <ul class="navigator">
-                <li><a href="#sobremi">Sobre Mi</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#experiencia">Experiencia</a><li>
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#estudios">Estudios</a></li>
-                <li><a href="#contacto">Contactame</a></li>
             </ul>
         </nav>
-     </header>
-     <main>
-        <section class="sobremi">
-            <article class="container-sobremi">
-                <img class="img-perfil" src="./Assets/Nuevo yo.jpg" alt="Fotografia de Gustavo Alaniz" width="180" height="200">
-                <h2>
-                    Soy <b>Gustavo, estudiante de la Tecnicatura en Programación.</b>
-                    Actualmente estoy desarrollando mis conocimientos en Java, Python,
-                    JavaScript, HTML y bases de datos. Me interesa seguir aprendiendo,
-                    mejorar mis habilidades y aplicar lo aprendido en proyectos reales.
-                    Busco crecer profesionalmente dentro del área de tecnología y
-                    desarrollo de software.
+    </header>
 
-                </h2>
+    <main>
+
+        <!-- SECCIÓN SOBRE MÍ -->
+        <section id="sobremi" class="sobremi">
+
+            <article class="container-sobremi">
+
+                <img class="img-perfil"
+                     src="./Assets/Nuevo yo.jpg"
+                     alt="Fotografía de Gustavo Alaniz"
+                     width="180"
+                     height="200">
+
+                <div>
+                    <h2>Sobre mí</h2>
+
+                    <p>
+                        Soy Gustavo Alaniz, estudiante de la
+                        Tecnicatura en Programación en la UTN.
+                    </p>
+
+                    <p>
+                        Actualmente desarrollo proyectos utilizando
+                        Python, Java y JavaScript, además de HTML,
+                        CSS y bases de datos.
+                    </p>
+
+                    <p>
+                        También estoy ampliando mis conocimientos
+                        en Linux, Git, GitHub, Cloud Computing
+                        e Inteligencia Artificial.
+                    </p>
+
+                    <p>
+                        Mi objetivo es continuar desarrollándome
+                        profesionalmente en el sector tecnológico,
+                        aplicando mis conocimientos en proyectos
+                        reales y adquiriendo nuevas habilidades.
+                    </p>
+                </div>
+
             </article>
+
         </section>
-     </main>
+
+        <!-- SECCIÓN EXPERIENCIA LABORAL -->
+        <section id="experiencia" class="experiencia">
+
+            <article class="container-experiencia">
+
+                <h2>Experiencia Laboral</h2>
+
+                <h3>La Tercera Deporte</h3>
+                <h4>Enero 2023 - Actualidad</h4>
+
+                <p>
+                    Administración y gestión de emprendimiento
+                    de comercio electrónico. Gestión de ventas
+                    en Mercado Libre y tienda online, atención
+                    al cliente, control de stock, publicaciones,
+                    logística y seguimiento de operaciones.
+                </p>
+
+                <a href="https://www.laterceradeporte.com.ar/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visitar tienda online
+                </a>
+
+                <h3>Complejo Los Moros</h3>
+                <h4>Mayo 2024 - Actualidad</h4>
+
+                <p>
+                    Administración de complejo turístico.
+                    Gestión de reservas, atención a huéspedes,
+                    coordinación operativa, manejo de plataformas
+                    digitales y seguimiento de pagos.
+                </p>
+                <a href="https://www.instagram.com/complejo_los_moros/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                        Visitar Instagram de Complejo Los Moros
+</a>
+
+                <h3>Bllann SRL</h3>
+                <h4>Julio 2016 - Enero 2024</h4>
+
+                <p>
+                    Gestión administrativa, liquidación de sueldos,
+                    control de novedades del personal, altas y bajas
+                    ante ARCA, gestión de ART, pagos, cobranzas
+                    y coordinación con proveedores.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- SECCIÓN ESTUDIOS -->
+        <section id="estudios" class="estudios">
+            <article class="container-estudios">
+                <h2>Formación Académica</h2>
+
+                <h3>Tecnicatura en Programación - UTN</h3>
+                <h4>Marzo 2026 - Actualmente cursando</h4>
+
+                <p>
+                    Formación en programación, lógica,
+                    matemática, arquitectura de computadoras,
+                    sistemas operativos y desarrollo de software.
+                </p>
+
+                <h3>Educación Secundaria</h3>
+                <h4>Finalizada en 2025</h4>
+
+                <p>
+                    Estudios secundarios completos.
+                </p>
+
+                <h2>Conocimientos Técnicos</h2>
+                    <h3>Lenguajes de programación</h3>
+                    <div class="habilidades">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <h3>Desarrollo web</h3>
+                    <div class="habilidades">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <h3>Herramientas y tecnologías</h3>
+                    <div class="habilidades">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>NetBeans</span>
+                        <span>PyCharm</span>
+                        <span>Linux</span>
+                    </div>
+
+                    <h3>Otros conocimientos</h3>
+                    <div class="habilidades">
+                        <span>Bases de datos</span>
+                        <span>Cloud Computing</span>
+                        <span>Inteligencia Artificial</span>
+                    </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Gustavo Alaniz. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
