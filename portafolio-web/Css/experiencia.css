@@ -29,3 +29,12 @@
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    .container-experiencia {
+        width: 90%;
+        padding: 1rem;
+        margin: 1.5rem auto;
+    }
+}

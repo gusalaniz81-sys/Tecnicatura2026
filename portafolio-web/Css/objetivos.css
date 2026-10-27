@@ -1,0 +1,73 @@
+.objetivos {
+    width: 100%;
+}
+
+.container-objetivos {
+    width: 90%;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    line-height: 1.6;
+}
+
+.container-objetivos h2 {
+    color: var(--colorh1-color);
+}
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.curso {
+    background-color: #334155;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .cursos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.curso .btn-certificado {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background-color: #0369A1;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.curso .btn-certificado:hover {
+    background-color: #0284C7;
+}
+
+.enlace-certificado {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 0;
+    background: transparent;
+    color: #38BDF8;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0;
+}
+
+.enlace-certificado:hover {
+    color: #7DD3FC;
+    text-decoration: underline;
+}

@@ -1,0 +1,78 @@
+.proyecto {
+    background-color: #334155;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-sizing: border-box;
+}
+
+.proyecto a {
+    display: inline-block;
+    color: var(--colorh1-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.proyecto a:hover {
+    text-decoration: underline;
+}
+
+.container-proyectos {
+    width: 80%;
+    max-width: 1100px;
+    padding: 2rem;
+    margin: 3rem auto;
+    background: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container-proyectos h2 {
+    color: var(--colorh1-color);
+}
+
+.proyecto {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #334155;
+}
+
+.proyecto h3 {
+    color: var(--colorh1-color);
+}
+
+.img-proyecto {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.proyecto:last-child {
+    border-bottom: none;
+}
+
+/* Galería de proyectos */
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+/* Diseño responsive para celulares */
+@media (max-width: 767px) {
+    .container-proyectos {
+        width: 90%;
+        padding: 1rem;
+        margin: 1.5rem auto;
+        box-sizing: border-box;
+    }
+
+    .galeria-proyectos {
+        grid-template-columns: 1fr;
+    }
+}

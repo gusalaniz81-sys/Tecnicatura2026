@@ -19,13 +19,19 @@
     border-radius: 50%;
 }
 
-@media (max-widht: 767px) {
+@media (max-width: 768px) {
     .container-sobremi {
-        width: 100%;
-        padding: 1;
-        margin-top: 1rem; /* Margen a lo alto*/
-        line-height: 2.5rem; /* Espacio entre los párrafos del texto*/
-        font-size: small; /*Tamaño de la fuente*/ 
+        width: 90%;
+        padding: 1rem;
+        margin-top: 1rem;
+        line-height: 1.6;
+        font-size: small;
         flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .img-perfil {
+        width: 150px;
+        height: auto;
     }
 }

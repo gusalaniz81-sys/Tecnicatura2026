@@ -1,4 +1,8 @@
-/* Variables de colores - Modo oscuro */
+
+/* ========================================
+   VARIABLES DE COLORES - MODO OSCURO
+======================================== */
+
 :root {
     --body-bg-color: #0F172A;
     --text-color: #F1F5F9;
@@ -6,8 +10,11 @@
     --card-bg-color: #1E293B;
     --secondary-text-color: #94A3B8;
 }
-/*Aplicamos variable creada en el root al body de nuestra web*/
-/*Reemplaze el body con el uso de variable css*/
+
+/* ========================================
+   ESTILOS GENERALES
+======================================== */
+
 body {
     background: var(--body-bg-color);
     color: var(--text-color);
@@ -19,7 +26,29 @@ h1, h2 {
     color: var(--colorh1-color);
 }
 
-/* Contenedor del menú */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+header {
+    box-sizing: border-box;
+}
+
+.descripcion {
+    max-height: 700px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* ========================================
+   MENÚ DE NAVEGACIÓN
+======================================== */
+
 .navigator {
     display: flex;
     justify-content: flex-end;
@@ -30,7 +59,6 @@ h1, h2 {
     flex-wrap: wrap;
 }
 
-/* Cada elemento del menú */
 .navigator li {
     font-size: 1rem;
     text-align: center;
@@ -38,11 +66,6 @@ h1, h2 {
     border-radius: 0.5rem;
     background: var(--card-bg-color);
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
-}
-
-a {
-    text-decoration: none;
-    color: var(--text-color);
 }
 
 .navigator li:hover {
@@ -53,50 +76,91 @@ a {
     color: var(--body-bg-color);
 }
 
-/* Celular (Pantalla pequeña, hasta 767px*/
-@media (max-widht: 767px) {
-    .titulo{
-        justify-content: center;
-    }
-    .navigator {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-    
-    .container-experiencia, .container-estudios{
-        width: 100%;
-        margin: 0rem;
-    }
-    .experiencia, .estudios {
-    width: 100%;
-    padding: 0;
-    color: var(--text-color);
-    }
-}
-.sobremi{
+/* ========================================
+   SECCIÓN SOBRE MÍ
+======================================== */
+
+.sobremi {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1023px){
-    .titulo {
-        justify-content: center;
+/* ========================================
+   RESPONSIVE - CELULARES
+   Pantallas de hasta 767px
+======================================== */
+
+@media (max-width: 767px) {
+
+    /* Centrar nombre y descripción */
+    header {
+        text-align: center;
+        padding: 1rem;
     }
+
+    header p {
+        line-height: 1.5;
+    }
+
+    /* Menú vertical y centrado */
     .navigator {
-        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-    }
-    .estudios, .experiencia{
-        width: 75%;
+        gap: 1rem;
+        margin: 1.5rem auto;
     }
 }
-/* Escritorio: pantallas de 1024px o más */
-@media (min-width: 1024px) {
-    .titulo {
-        justify-content: flex-start;
+
+/* ========================================
+   RESPONSIVE - CELULARES Y TABLETS
+   Pantallas de hasta 1023px
+======================================== */
+
+@media (max-width: 1023px) {
+
+    /* Mismo ancho para todas las tarjetas */
+    .container-sobremi,
+    .container-experiencia,
+    .container-estudios,
+    .container-proyectos,
+    .container-objetivos,
+    .container-contacto {
+        width: 90%;
+        max-width: 1100px;
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
     }
+}
+
+/* ========================================
+   RESPONSIVE - TABLETS Y CELULARES
+   EN POSICIÓN HORIZONTAL
+   Desde 768px hasta 1023px
+======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    header {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .navigator {
+        justify-content: center;
+        gap: 1rem;
+        margin: 1.5rem auto;
+    }
+}
+
+/* ========================================
+   ESCRITORIO
+   Pantallas desde 1024px
+======================================== */
+
+@media (min-width: 1024px) {
 
     .navigator {
         gap: 3rem;
@@ -109,10 +173,4 @@ a {
     .estudios {
         width: 100%;
     }
-}
-
-.descripcion {
-    max-height: 700px;
-    line-height: 1.6;
-    font-size: 18px;
 }
