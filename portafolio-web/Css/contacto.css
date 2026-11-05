@@ -82,3 +82,12 @@
 .formulario-contacto button:hover {
     background-color: #0284C7;
 }
+
+.correo-contacto {
+    color: var(--colorh1-color);
+    font-weight: 600;
+}
+
+.correo-contacto:hover {
+    text-decoration: underline;
+}

@@ -16,6 +16,11 @@
 }
 
 .img-perfil {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center 20%;
     border-radius: 50%;
 }
 
@@ -25,13 +30,12 @@
         padding: 1rem;
         margin-top: 1rem;
         line-height: 1.6;
-        font-size: small;
         flex-direction: column;
         gap: 1.5rem;
     }
 
     .img-perfil {
         width: 150px;
-        height: auto;
+        height: 150px;
     }
 }
